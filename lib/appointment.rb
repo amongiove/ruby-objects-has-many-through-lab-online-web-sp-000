@@ -14,7 +14,7 @@ class Appointment
     @@all
   end
 
-  def new_appointment
+  def patient
   end
 
 end
