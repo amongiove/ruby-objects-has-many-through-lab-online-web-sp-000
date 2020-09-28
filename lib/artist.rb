@@ -14,16 +14,15 @@ class Artist
   end
 
   def songs
-    @songs << Song.all.select {|song| song.artist == self}
+    Song.all.select {|song| song.artist == self}
   end
 
   def new_song(name, genre)
-    song = Song.new(name, self, genre)
-    @songs << song
+    Song.new(name, self, genre)
   end
 
   def genres
-   @songs.select {|song| song.genre}
+   self.songs.select {|song| song.genre}
   end
 
 
